@@ -1,0 +1,11 @@
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(100% / 3 - var(--section-item-gap));
+    margin-top: var(--section-item-gap);
+    margin-left: var(--section-item-gap);
+    background-color: var(--bg-color);
+  }
+}

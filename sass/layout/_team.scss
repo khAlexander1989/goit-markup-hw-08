@@ -1,0 +1,14 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__section-title {
+    margin-bottom: 50px;
+  }
+  &__specialists {
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:first-child) {
+    margin-left: var(--section-item-gap);
+  }
+}

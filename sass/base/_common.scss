@@ -1,0 +1,14 @@
+body {
+  color: var(--primary-text-color);
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
