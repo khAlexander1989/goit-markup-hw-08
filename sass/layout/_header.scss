@@ -1,70 +1,113 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   &__container {
     display: flex;
     align-items: center;
   }
+
   &__logo {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 16px 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 26px 0;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 24px 0;
+    }
   }
+
   &__nav {
-    display: flex;
-    margin-left: 93px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
   }
+
+  &__contacts {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
   &__item:not(:first-child) {
-    margin-left: 50px;
+    margin-top: 10px;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 32px;
+      margin-top: 0;
+    }
   }
+
   &__link {
-    position: relative;
+    @include header-link;
 
     display: inline-flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
-    color: var(--secondary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    font-size: 12px;
+    line-height: 1.17;
 
-    transition: color 250ms var(--timing-function);
+    color: var(--primary-text-color);
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
+
   &__link:hover,
-  &__link:focus,
-  &__link--active {
+  &__link:focus {
     color: var(--accent-color);
   }
 
-  &__link--grey {
-    color: var(--primary-text-color);
-  }
-  &__link--active::after {
-    content: '';
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    display: block;
-    width: 100%;
-    height: 4px;
-
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
-  &__contacts {
-    display: flex;
-    margin-left: auto;
-  }
   &__icon {
     fill: currentColor;
-    margin-right: 10px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
+
+  &__icon--mail {
+    width: 14px;
+    height: 10px;
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+
+  &__icon--phone {
+    width: 10px;
+    height: 14px;
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+
   &__link:hover &__icon,
   &__link:focus &__icon {
     fill: var(--accent-color);
+  }
+
+  &__burger-btn {
+    margin-left: auto;
   }
 }

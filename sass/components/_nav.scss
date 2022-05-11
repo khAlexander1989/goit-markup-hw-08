@@ -1,0 +1,58 @@
+.nav {
+  // ----------ССЫЛКИ----------
+  &__link {
+    @include header-link;
+    color: var(--secondary-text-color);
+  }
+
+  &__link--has-underline::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link--active {
+    color: var(--accent-color);
+  }
+
+  // ----------МОДИФИКАТОРЫ LINK----------
+
+  &__link--size--S {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  &__link--size--M {
+    font-size: 40px;
+    line-height: 47px;
+  }
+  &__link--padding--vertical {
+    padding: 32px 0;
+  }
+
+  // ----------МОДИФИКАТОРЫ NAV----------
+  &--type--column {
+    display: flex;
+    flex-direction: column;
+  }
+  &--type--row {
+    display: flex;
+  }
+
+  &__item--indent--top:not(:first-child) {
+    margin-top: 32px;
+  }
+  &__item--indent--left:not(:first-child) {
+    margin-left: 50px;
+  }
+}

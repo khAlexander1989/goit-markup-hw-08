@@ -5,21 +5,44 @@
   background-color: #2f303a;
 
   &__container {
-    display: flex;
-    align-items: baseline;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      text-align: left;
+    }
   }
+
+  &__wrapper {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 61px;
+    }
+  }
+
   &__appeal {
     margin-bottom: 20px;
   }
+
   &__contacts-container {
     min-width: 231px;
   }
+
   &__contacts {
     margin-top: 20px;
   }
+
   &__item:not(:first-child) {
     margin-top: 9px;
   }
+
   &__link {
     color: rgba(255, 255, 255, 0.6);
 
@@ -30,17 +53,34 @@
     letter-spacing: 0.03em;
     transition: color 250ms var(--timing-function);
   }
+
   &__link--white {
     color: #ffffff;
   }
+
   &__link:hover,
   &__link:focus {
     color: var(--accent-color);
   }
+
   &__socials-container {
-    margin-left: 70px;
+    margin-top: 60px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 70px;
+    }
   }
+
   &__subscription-container {
-    margin-left: 93px;
+    margin-top: 60px;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+      margin-left: 93px;
+    }
   }
 }

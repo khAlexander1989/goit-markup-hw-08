@@ -23,21 +23,33 @@
       <div class="container header__container">
         <a href="" class="logo header__logo"><span class="logo__accent">Web</span>Studio</a>
         <nav>
-          <ul class="header__nav list">
-            <li class="header__item">
-              <a href="./index.html" class="header__link link">Студия</a>
+          <ul class="header__nav nav nav--type--row list">
+            <li class="nav__item nav__item--indent--left">
+              <a
+                href="./index.html"
+                class="nav__link nav__link--size--S nav__link--padding--vertical link"
+                >Студия</a
+              >
             </li>
-            <li class="header__item">
-              <a href="" class="header__link link header__link--active">Портфолио</a>
+            <li class="nav__item nav__item--indent--left">
+              <a
+                href=""
+                class="nav__link nav__link--size--S nav__link--padding--vertical nav__link--has-underline nav__link--active link"
+                >Портфолио</a
+              >
             </li>
-            <li class="header__item"><a href="" class="header__link link">Контакты</a></li>
+            <li class="nav__item nav__item--indent--left">
+              <a href="" class="nav__link nav__link--size--S nav__link--padding--vertical link"
+                >Контакты</a
+              >
+            </li>
           </ul>
         </nav>
 
         <ul class="header__contacts list">
           <li class="header__item">
             <a href="mailto:info@devstudio.com" class="header__link header__link--grey link">
-              <svg class="header__icon" width="16" height="12">
+              <svg class="header__icon header__icon--mail">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -46,12 +58,69 @@
 
           <li class="header__item">
             <a href="tel:+380961111111" class="header__link header__link--grey link">
-              <svg class="header__icon" width="10" height="16">
+              <svg class="header__icon header__icon--phone">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
+        </ul>
+        <button
+          class="burger-btn header__burger-btn"
+          type="button"
+          aria-label="Кнопка открытия мобильного меню"
+          data-mobile-menu-open
+        >
+          <svg class="burger-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Мобильное меню -->
+
+      <div class="mobile-menu" data-mobile-menu>
+        <button
+          class="close-btn mobile-menu__close-btn"
+          type="button"
+          aria-label="Кнопка закрытия мобильного меню"
+          data-mobile-menu-close
+        >
+          <svg class="close-btn__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close-2"></use>
+          </svg>
+        </button>
+        <nav>
+          <ul class="mobile-menu__nav nav nav--type--column list">
+            <li class="nav__item nav__item--indent--top">
+              <a href="./index.html" class="nav__link nav__link--size--M link">Студия</a>
+            </li>
+            <li class="nav__item nav__item--indent--top">
+              <a href="" class="nav__link nav__link--size--M nav__link--active link">Портфолио</a>
+            </li>
+            <li class="nav__item nav__item--indent--top">
+              <a href="" class="nav__link nav__link--size--M link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu__contacts list">
+          <li class="mobile-menu__item">
+            <a href="tel:+380961111111" class="mobile-menu__link mobile-menu__link--accent link">
+              +38 096 111 11 11</a
+            >
+          </li>
+
+          <li class="mobile-menu__item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu__link link">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+        <ul class="socials mobile-menu__socials list">
+          <li class="socials__item"><a href="" class="socials__link link">Instagram</a></li>
+          <li class="socials__item"><a href="" class="socials__link link">Twitter</a></li>
+          <li class="socials__item"><a href="" class="socials__link link">Facebook</a></li>
+          <li class="socials__item"><a href="" class="socials__link link">LinkedIn</a></li>
         </ul>
       </div>
     </header>
@@ -84,10 +153,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-1.jpg"
+                    src="./images/project-1-370.jpg"
+                    srcset="
+                      ./images/project-1-370.jpg   370w,
+                      ./images/project-1-740.jpg   740w,
+                      ./images/project-1-1110.jpg 1110w,
+                      ./images/project-1-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Интерфейс Веб-сайта"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -108,10 +183,16 @@
               <a href="" class="card link">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-2.jpg"
+                    src="./images/project-2-370.jpg"
+                    srcset="
+                      ./images/project-2-370.jpg   370w,
+                      ./images/project-2-740.jpg   740w,
+                      ./images/project-2-1110.jpg 1110w,
+                      ./images/project-2-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Два баскетболиста борятся за мяч"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -134,10 +215,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-3.jpg"
+                    src="./images/project-3-370.jpg"
+                    srcset="
+                      ./images/project-3-370.jpg   370w,
+                      ./images/project-3-740.jpg   740w,
+                      ./images/project-3-1110.jpg 1110w,
+                      ./images/project-3-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Логотип приложения"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -158,10 +245,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-4.jpg"
+                    src="./images/project-4-370.jpg"
+                    srcset="
+                      ./images/project-4-370.jpg   370w,
+                      ./images/project-4-740.jpg   740w,
+                      ./images/project-4-1110.jpg 1110w,
+                      ./images/project-4-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Наушники"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -182,10 +275,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-5.jpg"
+                    src="./images/project-5-370.jpg"
+                    srcset="
+                      ./images/project-5-370.jpg   370w,
+                      ./images/project-5-740.jpg   740w,
+                      ./images/project-5-1110.jpg 1110w,
+                      ./images/project-5-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Две коробочки"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -206,10 +305,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-6.jpg"
+                    src="./images/project-6-370.jpg"
+                    srcset="
+                      ./images/project-6-370.jpg   370w,
+                      ./images/project-6-740.jpg   740w,
+                      ./images/project-6-1110.jpg 1110w,
+                      ./images/project-6-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Интерфейс Веб-сайта"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -230,10 +335,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-7.jpg"
+                    src="./images/project-7-370.jpg"
+                    srcset="
+                      ./images/project-7-370.jpg   370w,
+                      ./images/project-7-740.jpg   740w,
+                      ./images/project-7-1110.jpg 1110w,
+                      ./images/project-7-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Открытый журнал"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -254,10 +365,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-8.jpg"
+                    src="./images/project-8-370.jpg"
+                    srcset="
+                      ./images/project-8-370.jpg   370w,
+                      ./images/project-8-740.jpg   740w,
+                      ./images/project-8-1110.jpg 1110w,
+                      ./images/project-8-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Бирка с названием фирмы"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -278,10 +395,16 @@
               <a href="" class="card">
                 <div class="card__thumb">
                   <img
-                    src="./images/portfolio-img-9.jpg"
+                    src="./images/project-9-370.jpg"
+                    srcset="
+                      ./images/project-9-370.jpg   370w,
+                      ./images/project-9-740.jpg   740w,
+                      ./images/project-9-1110.jpg 1110w,
+                      ./images/project-9-1480.jpg 1480w
+                    "
+                    sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
                     class="picture"
                     alt="Интерфейс приложения"
-                    width="370"
                   />
                   <div class="card__overlay">
                     <p class="card__text">
@@ -304,70 +427,72 @@
     <!-- ПОДВАЛ СТРАНИЦЫ -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__contacts-container">
-          <a href="" class="logo logo--inverse"><span class="logo__accent">Web</span>Studio</a>
-          <address>
-            <ul class="footer__contacts list">
-              <li class="footer__item">
-                <a
-                  href="https://goo.gl/maps/NKPXv1XHCRWK6e3b6"
-                  class="footer__link footer__link--white link"
-                  target="_blank"
-                  >г. Киев, пр-т Леси Украинки, 26
+        <div class="footer__wrapper">
+          <div class="footer__contacts-container">
+            <a href="" class="logo logo--inverse"><span class="logo__accent">Web</span>Studio</a>
+            <address>
+              <ul class="footer__contacts list">
+                <li class="footer__item">
+                  <a
+                    href="https://goo.gl/maps/NKPXv1XHCRWK6e3b6"
+                    class="footer__link footer__link--white link"
+                    target="_blank"
+                    >г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="mailto:info@example.com" class="footer__link link">info@example.com</a>
+                </li>
+
+                <li class="footer__item">
+                  <a href="tel:+380991111111" class="footer__link link">+38 099 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__socials-container">
+            <p class="appeal footer__appeal">Присоединяйтесь</p>
+            <ul class="socials-icons list">
+              <li class="socials-icons__item">
+                <a href="" class="socials-icons__link socials-icons__link--inverse">
+                  <svg class="socials-icons__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
 
-              <li class="footer__item">
-                <a href="mailto:info@example.com" class="footer__link link">info@example.com</a>
+              <li class="socials-icons__item">
+                <a href="" class="socials-icons__link socials-icons__link--inverse">
+                  <svg class="socials-icons__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
 
-              <li class="footer__item">
-                <a href="tel:+380991111111" class="footer__link link">+38 099 111 11 11</a>
+              <li class="socials-icons__item">
+                <a href="" class="socials-icons__link socials-icons__link--inverse">
+                  <svg class="socials-icons__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials-icons__item">
+                <a href="" class="socials-icons__link socials-icons__link--inverse">
+                  <svg class="socials-icons__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer__socials-container">
-          <p class="appeal footer__appeal">Присоединяйтесь</p>
-          <ul class="socials list">
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--inverse">
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--inverse">
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--inverse">
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--inverse">
-                <svg class="socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer__subscription-container">
           <p class="appeal footer__appeal">Подпишитесь на рассылку</p>
           <form autocomplete="off" class="subscription">
             <input type="email" class="subscription__input" placeholder="E-mail" />
-            <button type="submit" class="btn btn--primary btn--has-icon">
+            <button type="submit" class="btn btn--primary btn--has-icon subscription__btn">
               Подписаться
               <svg class="btn__icon btn__icon--append" width="24" height="24">
                 <use href="./images/uncompressed-icons.svg#icon-send"></use>
@@ -377,5 +502,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mibile-menu.js"></script>
   </body>
 </html>

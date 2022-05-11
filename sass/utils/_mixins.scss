@@ -1,0 +1,9 @@
+@mixin header-link {
+  position: relative;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  transition: color 250ms var(--timing-function);
+}

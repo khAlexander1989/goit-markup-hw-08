@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/mixins';
 // -----------------------------------------------------------
 @import './base/common';
 @import './base/reset';
@@ -8,6 +9,7 @@
 @import './components/picture';
 @import './components/logo';
 @import './components/buttons';
+@import './components/nav';
 @import './components/section-title';
 @import './components/person-card';
 @import './components/socials';
@@ -19,6 +21,7 @@
 @import './components/agreement';
 // -----------------------------------------------------------
 @import './layout/_header';
+@import './layout/_mobile-menu';
 @import './layout/hero';
 @import './layout/_features';
 @import './layout/_services';

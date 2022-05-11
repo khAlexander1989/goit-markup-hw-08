@@ -1,15 +1,40 @@
 .companies {
   display: flex;
 
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+
+    margin-top: calc(-1 * var(--section-item-gap));
+    margin-left: calc(-1 * var(--section-item-gap));
+  }
+
   &__item:not(:first-child) {
     margin-left: var(--section-item-gap);
   }
+
+  &__item {
+    flex-basis: calc(100% / 2 - var(--section-item-gap));
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - var(--section-item-gap));
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: auto;
+      flex-grow: 1;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-top: var(--section-item-gap);
+      margin-left: var(--section-item-gap);
+    }
+  }
+
   &__link {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
+    min-height: 92px;
 
     color: #afb1b8;
     border: 1px solid #afb1b8;
@@ -17,6 +42,7 @@
 
     transition: border-color 250ms var(--timing-function);
   }
+
   &__icon {
     width: 106px;
     height: 60px;
@@ -25,10 +51,12 @@
 
     transition: fill 250ms var(--timing-function);
   }
+
   &__link:hover,
   &__link:focus {
     border-color: var(--accent-color);
   }
+
   &__link:hover &__icon,
   &__link:focus &__icon {
     fill: var(--accent-color);
