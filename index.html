@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body>
+  <body class="body">
     <!-- Шапка страницы -->
     <header class="header">
       <div class="container header__container">
@@ -81,48 +81,50 @@
       <!-- Мобильное меню -->
 
       <div class="mobile-menu" data-mobile-menu>
-        <button
-          class="close-btn mobile-menu__close-btn"
-          type="button"
-          aria-label="Кнопка закрытия мобильного меню"
-          data-mobile-menu-close
-        >
-          <svg class="close-btn__icon" width="40" height="40">
-            <use href="./images/icons.svg#icon-close-2"></use>
-          </svg>
-        </button>
-        <nav>
-          <ul class="mobile-menu__nav nav nav--type--column list">
-            <li class="nav__item nav__item--indent--top">
-              <a href="" class="nav__link nav__link--size--M nav__link--active link">Студия</a>
+        <div class="mobile-menu__container">
+          <button
+            class="close-btn mobile-menu__close-btn"
+            type="button"
+            aria-label="Кнопка закрытия мобильного меню"
+            data-mobile-menu-close
+          >
+            <svg class="close-btn__icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-2"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mobile-menu__nav nav nav--type--column list">
+              <li class="nav__item nav__item--indent--top">
+                <a href="" class="nav__link nav__link--size--M nav__link--active link">Студия</a>
+              </li>
+              <li class="nav__item nav__item--indent--top">
+                <a href="./portfolio.html" class="nav__link nav__link--size--M link">Портфолио</a>
+              </li>
+              <li class="nav__item nav__item--indent--top">
+                <a href="" class="nav__link nav__link--size--M link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__contacts list">
+            <li class="mobile-menu__item">
+              <a href="tel:+380961111111" class="mobile-menu__link mobile-menu__link--accent link">
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="nav__item nav__item--indent--top">
-              <a href="./portfolio.html" class="nav__link nav__link--size--M link">Портфолио</a>
-            </li>
-            <li class="nav__item nav__item--indent--top">
-              <a href="" class="nav__link nav__link--size--M link">Контакты</a>
+
+            <li class="mobile-menu__item">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__link link">
+                info@devstudio.com
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="mobile-menu__contacts list">
-          <li class="mobile-menu__item">
-            <a href="tel:+380961111111" class="mobile-menu__link mobile-menu__link--accent link">
-              +38 096 111 11 11</a
-            >
-          </li>
-
-          <li class="mobile-menu__item">
-            <a href="mailto:info@devstudio.com" class="mobile-menu__link link">
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
-        <ul class="socials mobile-menu__socials list">
-          <li class="socials__item"><a href="" class="socials__link link">Instagram</a></li>
-          <li class="socials__item"><a href="" class="socials__link link">Twitter</a></li>
-          <li class="socials__item"><a href="" class="socials__link link">Facebook</a></li>
-          <li class="socials__item"><a href="" class="socials__link link">LinkedIn</a></li>
-        </ul>
+          <ul class="socials mobile-menu__socials list">
+            <li class="socials__item"><a href="" class="socials__link link">Instagram</a></li>
+            <li class="socials__item"><a href="" class="socials__link link">Twitter</a></li>
+            <li class="socials__item"><a href="" class="socials__link link">Facebook</a></li>
+            <li class="socials__item"><a href="" class="socials__link link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- Оновное содержимое страницы -->

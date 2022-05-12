@@ -36,12 +36,13 @@
 
   transition: transform 250ms var(--timing-function);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
     width: 450px;
+
+    transform: translate(-50%, -50%) scale(1);
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
