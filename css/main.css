@@ -788,6 +788,13 @@ p {
   background-color: var(--bg-color);
   border: 1px solid #000000;
   border-radius: 2px;
+  -webkit-transition: border 250ms var(--timing-function);
+  transition: border 250ms var(--timing-function);
+}
+
+.agreement__icon:hover,
+.agreement__checkbox:focus + .agreement__icon {
+  border: 1px solid var(--accent-color);
 }
 
 .agreement__checkbox:checked + .agreement__icon {

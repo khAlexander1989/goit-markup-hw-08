@@ -27,6 +27,13 @@
     background-color: var(--bg-color);
     border: 1px solid #000000;
     border-radius: 2px;
+
+    transition: border 250ms var(--timing-function);
+  }
+
+  &__icon:hover,
+  &__checkbox:focus + &__icon {
+    border: 1px solid var(--accent-color);
   }
 
   &__checkbox:checked + &__icon {
