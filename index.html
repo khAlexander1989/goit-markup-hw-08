@@ -20,6 +20,7 @@
 
   <body class="body">
     <!-- Шапка страницы -->
+
     <header class="header">
       <div class="container header__container">
         <a href="" class="logo header__logo"><span class="logo__accent">Web</span>Studio</a>
@@ -127,9 +128,12 @@
         </div>
       </div>
     </header>
+
     <!-- Оновное содержимое страницы -->
+
     <main>
       <!-- Секция герой -->
+
       <section class="hero">
         <div class="hero__overlay">
           <div class="container">
@@ -145,7 +149,9 @@
           </div>
         </div>
       </section>
+
       <!-- Секция "Особенности" -->
+
       <section class="features section">
         <div class="container">
           <h2 class="visually-hidden">Особенности</h2>
@@ -200,7 +206,9 @@
           </ul>
         </div>
       </section>
+
       <!-- Секция "Чем мы занимаемся" -->
+
       <section class="services section">
         <div class="container">
           <h2 class="section-title services__section-title">Чем мы занимаемся</h2>
@@ -208,11 +216,12 @@
             <li class="services__item">
               <div class="services__thumb">
                 <img
-                  src="./images/box-1.jpg"
-                  srcset="./images/box-1.jpg 1x, ./images/box-1-2x.jpg 2x"
+                  src="./images/services/box-1.jpg"
+                  srcset="./images/services/box-1.jpg 1x, ./images/services/box-1-2x.jpg 2x"
                   class="picture"
                   alt="Программист разрабатывает десктопное приложение"
                   width="370"
+                  height="294"
                 />
                 <div class="services__content">
                   <h3 class="services__name">Десктопные приложения</h3>
@@ -223,11 +232,12 @@
             <li class="services__item">
               <div class="services__thumb">
                 <img
-                  src="./images/box-2.jpg"
-                  srcset="./images/box-2.jpg 1x, ./images/box-2-2x.jpg 2x"
+                  src="./images/services/box-2.jpg"
+                  srcset="./images/services/box-2.jpg 1x, ./images/services/box-2-2x.jpg 2x"
                   class="picture"
                   alt="Программист разрабатывает мобильное приложение"
                   width="370"
+                  height="294"
                 />
                 <div class="services__content">
                   <h3 class="services__name">Мобильные приложения</h3>
@@ -238,11 +248,12 @@
             <li class="services__item">
               <div class="services__thumb">
                 <img
-                  src="./images/box-3.jpg"
-                  srcset="./images/box-3.jpg 1x, ./images/box-3-2x.jpg 2x"
+                  src="./images/services/box-3.jpg"
+                  srcset="./images/services/box-3.jpg 1x, ./images/services/box-3-2x.jpg 2x"
                   class="picture"
                   alt="Дизайнер работает над дизайном приложения"
                   width="370"
+                  height="294"
                 />
                 <div class="services__content">
                   <h3 class="services__name">Дизайнерские решения</h3>
@@ -252,26 +263,43 @@
           </ul>
         </div>
       </section>
+
       <!-- Секция "Наша команда" -->
+
       <section class="section team">
         <div class="container">
           <h2 class="section-title team__section-title">Наша команда</h2>
           <ul class="team__specialists list">
             <li class="team__item">
               <div class="person-card team__person-card">
-                <img
-                  src="./images/specialist-1-270.jpg"
-                  srcset="
-                    ./images/specialist-1-270.jpg   270w,
-                    ./images/specialist-1-540.jpg   540w,
-                    ./images/specialist-1-810.jpg   810w,
-                    ./images/specialist-1-1080.jpg 1080w
-                  "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  class="picture"
-                  alt="Фотопортрет продукт-дизайнера"
-                  b
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/specialist-1-desk.jpg    1x,
+                      ./images/team/specialist-1-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-1-tab.jpg    1x,
+                      ./images/team/specialist-1-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-1-mob.jpg    1x,
+                      ./images/team/specialist-1-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/team/specialist-1-mob.jpg"
+                    class="picture"
+                    alt="Фотопортрет продукт-дизайнера"
+                  />
+                </picture>
+
                 <div class="person-card__content">
                   <h3 class="person-card__name">Игорь Демьяненко</h3>
                   <p class="person-card__position" lang="en">Product Designer</p>
@@ -314,18 +342,34 @@
 
             <li class="team__item">
               <div class="person-card team__person-card">
-                <img
-                  src="./images/specialist-2-270.jpg"
-                  srcset="
-                    ./images/specialist-2-270.jpg   270w,
-                    ./images/specialist-2-540.jpg   540w,
-                    ./images/specialist-2-810.jpg   810w,
-                    ./images/specialist-2-1080.jpg 1080w
-                  "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  class="picture"
-                  alt="Фотопортрет фронтенд-разработчика"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/specialist-2-desk.jpg    1x,
+                      ./images/team/specialist-2-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-2-tab.jpg    1x,
+                      ./images/team/specialist-2-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-2-mob.jpg    1x,
+                      ./images/team/specialist-2-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/team/specialist-2-mob.jpg"
+                    class="picture"
+                    alt="Фотопортрет фронтенд-разработчика"
+                  />
+                </picture>
+
                 <div class="person-card__content">
                   <h3 class="person-card__name">Ольга Репина</h3>
                   <p class="person-card__position" lang="en">Frontend Developer</p>
@@ -368,18 +412,34 @@
 
             <li class="team__item">
               <div class="person-card team__person-card">
-                <img
-                  src="./images/specialist-3-270.jpg"
-                  srcset="
-                    ./images/specialist-3-270.jpg   270w,
-                    ./images/specialist-3-540.jpg   540w,
-                    ./images/specialist-3-810.jpg   810w,
-                    ./images/specialist-3-1080.jpg 1080w
-                  "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  class="picture"
-                  alt="Фотопортрет маркетолога"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/specialist-3-desk.jpg    1x,
+                      ./images/team/specialist-3-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-3-tab.jpg    1x,
+                      ./images/team/specialist-3-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-3-mob.jpg    1x,
+                      ./images/team/specialist-3-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/team/specialist-3-mob.jpg"
+                    class="picture"
+                    alt="Фотопортрет маркетолога"
+                  />
+                </picture>
+
                 <div class="person-card__content">
                   <h3 class="person-card__name">Николай Тарасов</h3>
                   <p class="person-card__position" lang="en">Marketing</p>
@@ -422,18 +482,35 @@
 
             <li class="team__item">
               <div class="person-card team__person-card">
-                <img
-                  src="./images/specialist-4-270.jpg"
-                  srcset="
-                    ./images/specialist-4-270.jpg   270w,
-                    ./images/specialist-4-540.jpg   540w,
-                    ./images/specialist-4-810.jpg   810w,
-                    ./images/specialist-4-1080.jpg 1080w
-                  "
-                  sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
-                  class="picture"
-                  alt="Фотопортрет разработчика пользовательских интерфейсов"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/specialist-4-desk.jpg    1x,
+                      ./images/team/specialist-4-desk-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-4-tab.jpg    1x,
+                      ./images/team/specialist-4-tab-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/specialist-4-mob.jpg    1x,
+                      ./images/team/specialist-4-mob-2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/team/specialist-4-mob.jpg"
+                    class="picture"
+                    alt="Фотопортрет разработчика
+                  пользовательских интерфейсов"
+                  />
+                </picture>
+
                 <div class="person-card__content">
                   <h3 class="person-card__name">Михаил Ермаков</h3>
                   <p class="person-card__position" lang="en">UI Designer</p>
@@ -533,7 +610,9 @@
         </div>
       </section>
     </main>
+
     <!-- Подвал страницы -->
+
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__wrapper">
@@ -611,7 +690,9 @@
         </div>
       </div>
     </footer>
+
     <!-- МОДАЛЬНОЕ ОКНО -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
