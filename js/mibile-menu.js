@@ -6,11 +6,22 @@
     body: document.querySelector('.body'),
   };
 
-  refs.openMobileMenuBtn.addEventListener('click', toggleMobileMenu);
-  refs.closeMobileMenuBtn.addEventListener('click', toggleMobileMenu);
-
   function toggleMobileMenu() {
+    const isMobileMenuOpen =
+      refs.openMobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    refs.openMobileMenuBtn.setAttribute('aria-expanded', !isMobileMenuOpen);
+
     refs.mobileMenu.classList.toggle('is-open');
     refs.body.classList.toggle('no-scroll');
   }
+
+  refs.openMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+  refs.closeMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+  window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
+    if (!event.matches) return;
+    refs.mobileMenu.classList.remove('is-open');
+    refs.openMobileMenuBtn.setAttribute('aria-expanded', false);
+    refs.body.classList.remove('no-scroll');
+  });
 })();
